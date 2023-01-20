@@ -5,8 +5,7 @@ import { Base64 } from './Base64';
 import { CommandRunner, commands } from "./CommandRunner";
 
 export function activate(context: vscode.ExtensionContext) {
-
-	const commandRegistration = vscode.commands.registerTextEditorCommand('vsutils.convert', async () => {
+	const commandRegistration = vscode.commands.registerTextEditorCommand('vsutils.perform', async () => {
 		const editor = vscode.window.activeTextEditor;
 
 		if (!editor) {
@@ -37,6 +36,9 @@ export function activate(context: vscode.ExtensionContext) {
 		let fallbackSelected = selectedText || documentText;
 		fallbackSelected = fallbackSelected.trim();
 
+		const config = vscode.workspace.getConfiguration('vsutils');
+		const outputLocation = config.get('outputLocation');
+
 		try {
 			const formattedText = await CommandRunner.run({
 				command: choice.label,
@@ -47,6 +49,28 @@ export function activate(context: vscode.ExtensionContext) {
 			});
 
 			let language = commands.find(c => c.label === choice?.label)?.outputLanguage ?? 'plaintext';
+
+			if (outputLocation === 'clipboard') {
+				await vscode.env.clipboard.writeText(formattedText);
+				vscode.window.showInformationMessage('Copied to clipboard');
+				return;
+			}
+
+			if (outputLocation === 'replace') {
+				editor.edit(editBuilder => {
+					editBuilder.replace(editor.selection, formattedText);
+				});
+				return;
+			}
+
+			if (outputLocation === 'newLine') {
+				const newLine = editor.selection.active.line + 1;
+				const newLinePosition = new vscode.Position(newLine, 0);
+				editor.edit(editBuilder => {
+					editBuilder.insert(newLinePosition, formattedText);
+				});
+				return;
+			}
 
 			let doc = await vscode.workspace.openTextDocument({
 				content: formattedText,

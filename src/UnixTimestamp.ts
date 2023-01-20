@@ -1,7 +1,7 @@
 import { CommandArgs } from "./CommandArgs";
 
 export class UnixTimestamp {
-    static async toDate(args: CommandArgs):  Promise<string> {
+    static async toDate(args: CommandArgs): Promise<string> {
         const date = new Date(parseInt(args.fallbackSelected) * 1000);
 
         return date.getFullYear() + "-" +
@@ -12,15 +12,15 @@ export class UnixTimestamp {
             ("00" + date.getSeconds()).slice(-2);
     }
 
-    static async toTimestamp(args: CommandArgs):  Promise<string> {
+    static async toTimestamp(args: CommandArgs): Promise<string> {
         return (new Date(args.fallbackSelected).getTime() / 1000).toString();
     }
 
-    static async currentTimestamp(args: CommandArgs):  Promise<string> {
+    static async currentTimestamp(args: CommandArgs): Promise<string> {
         return Math.floor(Date.now() / 1000).toString();
     }
 
-    static async currentDate(args: CommandArgs):  Promise<string> {
+    static async currentDate(args: CommandArgs): Promise<string> {
         return await UnixTimestamp.toDate({ ...args, fallbackSelected: await UnixTimestamp.currentTimestamp(args) });
     }
 }

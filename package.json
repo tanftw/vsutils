@@ -26,11 +26,34 @@
   "contributes": {
     "commands": [
       {
-        "command": "vsutils.convert",
-        "title": "Convert",
-        "category": "VS Utils"
+        "command": "vsutils.perform",
+        "title": "Select a conversion to perform",
+        "category": "VSUtils"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "VS Utils",
+      "properties": {
+        "vsutils.outputLocation": {
+          "title": "Output Location",
+          "type": "string",
+          "default": "replace",
+          "enum": [
+            "clipboard",
+            "replace",
+            "newLine",
+            "newEditor"
+          ],
+          "enumDescriptions": [
+            "Copy the converted text to the clipboard",
+            "Replace the current selection with the converted text",
+            "Insert the converted text on the next line after the current selection",
+            "Open a new editor with the converted text"
+          ],
+          "description": "Where to output the converted text"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",

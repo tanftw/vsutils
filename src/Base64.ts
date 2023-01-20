@@ -1,7 +1,6 @@
 import { CommandArgs } from "./CommandArgs";
 
 export class Base64 {
-
     static async encode(args: CommandArgs): Promise<string> {
         return Buffer.from(args.fallbackSelected).toString('base64');
     }
