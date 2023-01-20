@@ -1,5 +1,5 @@
 # VS Utils
-The missing utility functions for VS Code
+The missing utilities extension for VS Code. It's simple, fast, and absolute free.
 
 ## Features
 
@@ -13,7 +13,9 @@ For example if there is an image subfolder under your extension project workspac
 
 ## Extension Settings
 This extension contributes the following settings:
-* `vsutils.outputLocation`: Output result location, use the following values:
+
+### `vsutils.outputLocation`
+Output result location, use the following values:
 
 - `clipboard` copy output to clipboard
 - `replace` replace current selection value (or cursor position)
