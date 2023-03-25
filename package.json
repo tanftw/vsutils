@@ -1,8 +1,8 @@
 {
   "name": "vsutils",
   "displayName": "VS Utils",
-  "description": "Utility functions for VS Code",
-  "version": "1.0.0",
+  "description": "The missing utilities extension for VS Code. Handling common tasks like encode/decode, serialize, timestamp... without leaving your editor.",
+  "version": "1.0.1",
   "publisher": "tanftw",
   "engines": {
     "vscode": "^1.74.0"
@@ -34,7 +34,8 @@
     "html",
     "css",
     "javascript",
-    "php"
+    "php",
+    "productivity"
   ],
   "activationEvents": [
     "onCommand:vsutils.convert"
