@@ -17,9 +17,11 @@
     "url": "https://github.com/tanftw/vsutils/issues",
     "email": "hi@tan.ng"
   },
+  "license": "MIT",
   "categories": [
     "Other"
   ],
+  "pricing": "Free",
   "extensionKind": [
     "ui",
     "workspace"
