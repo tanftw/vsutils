@@ -3,6 +3,8 @@ The missing utilities extension for VS Code. It's simple, fast, and absolute fre
 
 ## Features
 
+![Features](images/vsutils.gif)
+
 - Base64 encode
 - Base64 decode
 - Current timestamp
@@ -25,8 +27,6 @@ The missing utilities extension for VS Code. It's simple, fast, and absolute fre
 - Encrypt as SHA256
 - Encrypt as SHA512
 
-![Features](images/vsutils.gif)
-
 ## Extension Settings
 This extension contributes the following settings:
 
@@ -37,7 +37,6 @@ Output result location, use the following values:
 - `replace` replace current selection value (or cursor position)
 - `newLine` same as next but new line
 - `newEditor` new editor
-
 
 ## Release Notes
 ### 1.0.0
