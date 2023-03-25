@@ -1,5 +1,6 @@
 # VS Utils
-The missing utilities extension for VS Code. It's simple, fast, and absolute free.
+The missing utilities extension for VS Code. Handling common tasks like encode/decode, serialize, timestamp... without leaving your editor.
+No complicated UI, just simple commands.
 
 ## Features
 
@@ -37,6 +38,20 @@ Output result location, use the following values:
 - `replace` replace current selection value (or cursor position)
 - `newLine` same as next but new line
 - `newEditor` new editor
+
+## FAQ
+
+### Will it slow down my VS Code?
+No, the extension only runs when you invoke a command.
+### How to use?
+- Select text
+- Press `Ctrl+Shift+P` or `Cmd+Shift+P` to open command palette
+- Type `vsutils` and select command
+
+### How to change output location?
+- Press Ctrl + , or Cmd + , to open settings
+- Search for `vsutils.outputLocation`
+- Select your desired output location: `clipboard`, `replace`, `newLine`, `newEditor`
 
 ## Release Notes
 ### 1.0.0
