@@ -25,7 +25,7 @@ The missing utilities extension for VS Code. It's simple, fast, and absolute fre
 - Encrypt as SHA256
 - Encrypt as SHA512
 
-![Features](/images/vsutils.gif)
+![Features](images/vsutils.gif)
 
 ## Extension Settings
 This extension contributes the following settings:
