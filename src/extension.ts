@@ -1,7 +1,4 @@
 import * as vscode from 'vscode';
-import * as fs from 'fs';
-import * as path from 'path';
-import { Base64 } from './Base64';
 import { CommandRunner, commands } from "./CommandRunner";
 
 export function activate(context: vscode.ExtensionContext) {
@@ -32,6 +29,8 @@ export function activate(context: vscode.ExtensionContext) {
 			vscode.window.showInformationMessage('No format selected');
 			return;
 		}
+
+		quickPick.hide();
 
 		let fallbackSelected = selectedText || documentText;
 		fallbackSelected = fallbackSelected.trim();

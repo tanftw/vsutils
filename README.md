@@ -2,14 +2,29 @@
 The missing utilities extension for VS Code. It's simple, fast, and absolute free.
 
 ## Features
+Base64 encode
+Base64 decode
+Current timestamp
+Current date
+Timestamp to date
+Date to Timestamp
+Parse JWT
+Color: Hex to RGB
+Color: RGB to Hex
+PHP Unserialize
+URL Encode
+URL Decode
+Html Encode
+Html Decode
+Html Entities Encode
+Html Entities Decode
+Generate Random UUID v4
+Encrypt as MD5
+Encrypt as SHA1
+Encrypt as SHA256
+Encrypt as SHA512
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![feature X](/tanftw/vsutils/raw/master/images/vsutils.gif)
 
 ## Extension Settings
 This extension contributes the following settings:
@@ -22,28 +37,7 @@ Output result location, use the following values:
 - `newLine` same as next but new line
 - `newEditor` new editor
 
-## Todos
-- Make PHP server for PHP related features
-- Make GIF feature
-- Publish extension
 
 ## Release Notes
 ### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+Initial release

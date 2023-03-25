@@ -3,11 +3,11 @@ import { UnixTimestamp } from "./UnixTimestamp";
 import { CommandArgs } from "./CommandArgs";
 import { Jwt } from "./Jwt";
 import { Color } from "./Color";
-import { Serializer } from "./Serializer";
 import { Url } from "./Url";
 import { Html } from "./Html";
 import { Uuid } from "./Uuid";
 import { Crypto } from "./Crypto";
+import { PHP } from "./PHP";
 
 type Command = {
     label: string;
@@ -26,8 +26,7 @@ export const commands: Command[] = [
     { label: '$(symbol-namespace) JWT Parser', description: 'Parse JWT', caller: Jwt.parse, outputLanguage: 'json' },
     { label: '$(symbol-color) Hex to RGB', description: 'Color: Hex to RGB', caller: Color.hexToRGB },
     { label: '$(symbol-color) RGB to HEX', description: 'Color: RGB to Hex', caller: Color.rgbToHex },
-    { label: '$(file-binary) Serialize', description: 'Serialize', caller: Serializer.serialize },
-    { label: '$(symbol-array) Unserialize', description: 'Unserialize', caller: Serializer.unserialize },
+    { label: '$(symbol-array) Unserialize', description: 'Unserialize', caller: PHP.unserialize },
     { label: '$(link) URL Encode', description: 'URL Encode', caller: Url.encode },
     { label: '$(link) URL Decode', description: 'URL Decode', caller: Url.decode },
     { label: '$(globe) Html Encode', description: 'Html Encode (Hex)', caller: Html.encode },
