@@ -28,6 +28,11 @@ No complicated UI, just simple commands.
 - Encrypt as SHA256
 - Encrypt as SHA512
 
+## How to use?
+- Select text, if no text selected, the command will use all text in current editor
+- Press `Ctrl+Shift+P` or `Cmd+Shift+P` to open command palette
+- Type `vsutils` and select command
+
 ## Extension Settings
 This extension contributes the following settings:
 
@@ -43,10 +48,6 @@ Output result location, use the following values:
 
 ### Will it slow down my VS Code?
 No, the extension only runs when you invoke a command.
-### How to use?
-- Select text
-- Press `Ctrl+Shift+P` or `Cmd+Shift+P` to open command palette
-- Type `vsutils` and select command
 
 ### How to change output location?
 - Press Ctrl + , or Cmd + , to open settings
