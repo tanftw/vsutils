@@ -2,12 +2,26 @@
   "name": "vsutils",
   "displayName": "VS Utils",
   "description": "Utility functions for VS Code",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "publisher": "tanftw",
   "engines": {
     "vscode": "^1.74.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tanftw/vsutils.git"
+  },
+  "homepage": "https://github.com/tanftw/vsutils/blob/master/README.md",
+  "bugs": {
+    "url": "https://github.com/tanftw/vsutils/issues",
+    "email": "hi@tan.ng"
+  },
   "categories": [
     "Other"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
   ],
   "keywords": [
     "utility",
@@ -22,6 +36,12 @@
   "activationEvents": [
     "onCommand:vsutils.convert"
   ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
