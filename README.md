@@ -2,10 +2,8 @@
 The missing utilities extension for VS Code. Handling common tasks like encode/decode, serialize, timestamp... without leaving your editor.
 No complicated UI, just simple commands.
 
-## Features
-
 ![Features](images/vsutils.gif)
-
+## Features
 - Base64 encode
 - Base64 decode
 - Current timestamp
@@ -15,7 +13,9 @@ No complicated UI, just simple commands.
 - Parse JWT
 - Color: Hex to RGB
 - Color: RGB to Hex
+- PHP Serialize
 - PHP Unserialize
+- String Reverse
 - URL Encode
 - URL Decode
 - Html Encode
@@ -57,3 +57,6 @@ No, the extension only runs when you invoke a command.
 ## Release Notes
 ### 1.0.0
 Initial release
+
+### 1.1.0 - 2023-04-06
+- New commands: Serialize, String Reverse

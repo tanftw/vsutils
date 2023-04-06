@@ -2,10 +2,10 @@
   "name": "vsutils",
   "displayName": "VS Utils",
   "description": "The missing utilities extension for VS Code. Handling common tasks like encode/decode, serialize, timestamp... without leaving your editor.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "publisher": "tanftw",
   "engines": {
-    "vscode": "^1.74.0"
+    "vscode": "^1.77.0"
   },
   "icon": "/images/logo.png",
   "repository": {

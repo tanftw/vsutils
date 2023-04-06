@@ -8,6 +8,7 @@ import { Html } from "./Html";
 import { Uuid } from "./Uuid";
 import { Crypto } from "./Crypto";
 import { PHP } from "./PHP";
+import { Str } from "./Str";
 
 type Command = {
     label: string;
@@ -26,7 +27,9 @@ export const commands: Command[] = [
     { label: '$(symbol-namespace) JWT Parser', description: 'Parse JWT', caller: Jwt.parse, outputLanguage: 'json' },
     { label: '$(symbol-color) Hex to RGB', description: 'Color: Hex to RGB', caller: Color.hexToRGB },
     { label: '$(symbol-color) RGB to HEX', description: 'Color: RGB to Hex', caller: Color.rgbToHex },
+    { label: '$(symbol-array) Serialize', description: 'Serialize', caller: PHP.serialize },
     { label: '$(symbol-array) Unserialize', description: 'Unserialize', caller: PHP.unserialize },
+    { label: '$(note) String Reverse', description: 'String Reverse', caller: Str.reverse },
     { label: '$(link) URL Encode', description: 'URL Encode', caller: Url.encode },
     { label: '$(link) URL Decode', description: 'URL Decode', caller: Url.decode },
     { label: '$(globe) Html Encode', description: 'Html Encode (Hex)', caller: Html.encode },
